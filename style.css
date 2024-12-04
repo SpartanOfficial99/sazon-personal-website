@@ -1,76 +1,75 @@
-/* General body styling with sky-blue background */
+/* General Body Styling */
 body {
-    background-color: #87CEEB;  /* Sky-blue background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+    text-align: center;
+    background-color: #87ceeb; /* Sky Blue */
+    color: #2c3e50; /* Professional navy-blue tone */
 }
 
-/* Header styling */
+/* Header Styling */
 header {
-    text-align: center;
-    color: white;
-    margin-top: 30px;
+    background-color: #2c3e50; /* Navy Blue */
+    color: #ffffff; /* White Text */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 3rem;
-    margin: 10px 0;
+    margin: 0;
+    font-size: 3em;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.2em;
+    margin: 5px 0;
 }
 
-/* Main container for boxes */
+/* Container for Categories */
 .container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 30px 0;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
 }
 
-/* Individual category box styling */
+/* Individual Category Boxes */
 .box {
-    background-color: #ffffff;
-    color: #333;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    margin: 15px;
-    width: 180px;
+    background-color: #ffffff; /* White for clean contrast */
+    color: #2c3e50; /* Navy Blue text */
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
     text-align: center;
+    border-radius: 12px;
     cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Add hover effect */
 .box:hover {
-    background-color: #4682B4;  /* Steel-blue on hover */
-    color: white;
-    transform: translateY(-8px);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #dff9fb; /* Light sky blue hover effect */
+    color: #34495e; /* Slightly darker text */
 }
 
-/* Output text styling */
+/* Output Text Styling */
 #output {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1.5em;
+    color: #34495e;
     margin-top: 20px;
 }
 
-/* Footer styling */
+/* Footer Styling */
 footer {
-    text-align: center;
-    color: white;
-    margin-top: auto;
-    padding: 10px 0;
-    width: 100%;
-    background-color: #4682B4;  /* Consistent with box hover color */
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
 }
