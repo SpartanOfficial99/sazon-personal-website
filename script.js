@@ -1,5 +1,6 @@
-function boxClicked(category) {
+function boxClicked(feature) {
     const output = document.getElementById('output');
-    output.textContent = `You clicked on: ${category}`;
-    output.style.color = "#16a085"; // Professional green tone for output text
+    output.textContent = `You clicked on "${feature}"!`;
+    output.style.color = "#ffd700"; // Highlight the message
+    output.style.animation = "pulse 1s infinite"; // Add an animation to the message
 }
