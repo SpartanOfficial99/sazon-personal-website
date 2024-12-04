@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
