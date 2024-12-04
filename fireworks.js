@@ -1,4 +1,4 @@
-// Set up the canvas for fireworks
+// Create and append a canvas for fireworks
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
 canvas.id = 'fireworksCanvas';
@@ -8,7 +8,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Variables to hold the fireworks
+// Variables to hold the fireworks and particles
 let fireworks = [];
 let particles = [];
 
