@@ -3,20 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reeven's Personal Website</title>
+    <title>Welcome to Reeven's WebSpace</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline CSS for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .box {
+            background-color: #6200ea;
+            color: white;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            background-color: #3700b3;
+        }
+        #output {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Website</h1>
+        <p>Empowering Ideas Through Technology</p>
         <p>Hello, my name is Reeven.</p>
     </header>
     
     <main>
         <div class="container">
-            <div class="box" onclick="boxClicked('Category 1')">Category 1</div>
-            <div class="box" onclick="boxClicked('Category 2')">Category 2</div>
-            <div class="box" onclick="boxClicked('Category 3')">Category 3</div>
+            <div class="box" onclick="boxClicked('Conversion')">Conversion</div>
+            <div class="box" onclick="boxClicked('Income Tax Calculator')">Income Tax Calculator</div>
+            <div class="box" onclick="boxClicked('N Factorial Payroll')">N Factorial Payroll</div>
             <div class="box" onclick="boxClicked('Category 4')">Category 4</div>
         </div>
         <p id="output"></p>
@@ -26,6 +83,11 @@
         <p>&copy; 2024 Reeven's Website. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function boxClicked(category) {
+            document.getElementById('output').textContent = `You clicked on ${category}`;
+        }
+    </script>
 </body>
 </html>
+
