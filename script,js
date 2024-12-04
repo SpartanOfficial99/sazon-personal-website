@@ -1,0 +1,3 @@
+function boxClicked(category) {
+    document.getElementById('output').innerText = `You clicked on ${category}`;
+}
