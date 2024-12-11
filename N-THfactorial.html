@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f8fb;
+        }
+        h1 {
+            color: #0078d4;
+        }
+        label, input, button, p {
+            display: block;
+            margin: 10px 0;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #0078d4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        p {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Calculator</h1>
+
+    <label for="numInput">Enter a positive number:</label>
+    <input type="number" id="numInput" placeholder="Enter a number">
+
+    <button onclick="performCalculations()">Perform Operations</button>
+
+    <p id="output"></p>
+
+    <script>
+        function performCalculations() {
+            const number = parseInt(document.getElementById("numInput").value);
+
+            if (isNaN(number) || number < 1) {
+                document.getElementById("output").textContent = "Please enter a valid positive number.";
+                return;
+            }
+
+            // Calculate factorial using a while loop
+            let factorialResult = 1;
+            let counter = 1;
+            while (counter <= number) {
+                factorialResult *= counter;
+                counter++;
+            }
+
+            // Calculate sum of first 'number' using a do-while loop
+            let sumResult = 0;
+            let current = 1;
+            do {
+                sumResult += current;
+                current++;
+            } while (current <= number);
+
+            // Calculate average of first 'number' using a for loop
+            let total = 0;
+            for (let index = 1; index <= number; index++) {
+                total += index;
+            }
+            const averageResult = total / number;
+
+            // Display results
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = `
+                <div>Factorial of ${number}: <strong>${factorialResult}</strong></div>
+                <div>Sum of first ${number} numbers: <strong>${sumResult}</strong></div>
+                <div>Average of first ${number} numbers: <strong>${averageResult.toFixed(2)}</strong></div>
+            `;
+        }
+    </script>
+</body>
+</html>
