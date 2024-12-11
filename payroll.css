@@ -1,139 +1,57 @@
 body {
-   font-family: Arial, sans-serif;
+   font-family: 'Helvetica Neue', sans-serif;
    margin: 0;
    padding: 0;
-   background-color: #badbf1;
- }
- 
- #maindiv {
+   background-color: #f2f7fa;
+}
+.container {
    display: grid;
    grid-template-columns: 1fr 2fr;
    gap: 20px;
-   width: 90%;
+   width: 80%;
    margin: auto;
    padding: 20px;
- }
- 
- #inputdiv, #outputdiv {
+}
+.form-container, .payroll-container {
    padding: 20px;
-   border: 1px solid #ebe6e6;
-   border-radius: 10px;
+   border: 1px solid #d1d1d1;
+   border-radius: 8px;
    background-color: #fff;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- 
- #footerdiv {
-   display: block;
-   grid-column: 1 / -1;
-   text-align: center;
-   margin-top: 20px;
-   padding: 20px;
- }
- 
- h2 {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
    margin-top: 0;
- }
- 
- label {
+}
+label {
    display: block;
-   margin-top: 10px;
- }
- 
- input, select, button {
+   margin-top: 12px;
+}
+input, select, button {
    width: 100%;
-   padding: 10px;
+   padding: 12px;
    margin-top: 5px;
-   border: 1px solid #9c9595;
-   border-radius: 5px;
- }
- 
- button {
-   background-color: #007bff;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+}
+button {
+   background-color: #4CAF50;
    color: white;
    cursor: pointer;
- }
- 
- button:hover {
-   background-color: #0056b3;
- }
- 
- table {
+   border: none;
+}
+button:hover {
+   background-color: #45a049;
+}
+table {
    width: 100%;
    border-collapse: collapse;
    margin-top: 20px;
- }
- 
- th, td {
+}
+th, td {
    text-align: center;
-   padding: 10px;
- }
- 
- tfoot {
+   padding: 12px;
+   border: 1px solid #ddd;
+}
+tfoot {
    font-weight: bold;
- }
- 
- footer {
-   margin-top: 20px;
 }
-
-footer .btn-main {
-   display: inline-block;
-   padding: 10px 20px;
-   background-color: #00509E; 
-   color: #FFFFFF;
-   text-decoration: none;
-   border-radius: 5px;
-   font-size: 16px;
-   transition: background-color 0.3s ease;
-}
-
-footer .btn-main:hover {
-   background-color: #003C71; 
-}
-
- 
- dialog {
-   border: none;
-   border-radius: 10px;
-   padding: 20px;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-   text-align: center;
-   width: 400px;
-   background-color: #ffffff;
- }
- 
- dialog::backdrop {
-   background-color: rgba(0, 0, 0, 0.5);
- }
- 
- .modal-buttons {
-   display: flex;
-   justify-content: center;
-   gap: 10px;
- }
- 
- .modal-buttons button {
-   padding: 10px 20px;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
- }
- 
- .modal-buttons #btnConfirm,
- .modal-buttons #btnYes {
-   background-color: #28a745;
-   color: white;
- }
- 
- .modal-buttons #btnCancel,
- .modal-buttons #btnNo {
-   background-color: #dc3545;
-   color: white;
- }
- 
- @media (max-width: 768px) {
-   #maindiv {
-     grid-template-columns: 1fr;
-   }
- }
