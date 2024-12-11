@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tax Estimator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        label, input, button, p {
+            display: block;
+            margin: 10px 0;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tax Estimator</h1>
+
+    <label for="annualIncome">Enter Your Annual Income:</label>
+    <input type="number" id="annualIncome" placeholder="Enter your income in PHP">
+
+    <button onclick="computeTax()">Estimate Tax</button>
+
+    <p id="taxOutput"></p>
+
+    <script>
+        function computeTax() {
+            const incomeField = document.getElementById("annualIncome");
+            const annualIncome = parseFloat(incomeField.value);
+
+            if (isNaN(annualIncome) || annualIncome < 0) {
+                document.getElementById("taxOutput").textContent = "Please enter a valid income amount.";
+                return;
+            }
+
+            let estimatedTax = 0;
+
+            if (annualIncome <= 250000) {
+                estimatedTax = 0;
+            } else if (annualIncome <= 400000) {
+                estimatedTax = (annualIncome - 250000) * 0.20;
+            } else if (annualIncome <= 800000) {
+                estimatedTax = 30000 + (annualIncome - 400000) * 0.25;
+            } else if (annualIncome <= 2000000) {
+                estimatedTax = 130000 + (annualIncome - 800000) * 0.30;
+            } else if (annualIncome <= 8000000) {
+                estimatedTax = 490000 + (annualIncome - 2000000) * 0.32;
+            } else {
+                estimatedTax = 2410000 + (annualIncome - 8000000) * 0.35;
+            }
+
+            const outputElement = document.getElementById("taxOutput");
+            outputElement.textContent = `Your estimated tax liability is: PHP ${estimatedTax.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
